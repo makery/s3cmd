@@ -34,6 +34,9 @@ from S3Uri import S3Uri
 from ConnMan import ConnMan, CertificateError
 from Crypto import sign_string_v2, sign_string_v4, checksum_sha256_file, checksum_sha256_buffer
 
+# Add .svg mime-type as it is not included in the default mimetypes module.
+mimetypes.add_type('image/svg+xml', '.svg')
+
 try:
     from ctypes import ArgumentError
     import magic
